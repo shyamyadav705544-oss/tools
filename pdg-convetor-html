@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>All-in-One PDF & Document Toolkit</title>
+    <meta name="description" content="Free online tools to convert, compress, merge, split, edit, and manage PDF, Word, PowerPoint, and Excel files. Convert PDF to Word, JPG, and more.">
+    <meta name="keywords" content="pdf to word, word to pdf, compress pdf, edit pdf, merge pdf, split pdf, pdf to jpg, excel to pdf, powerpoint to pdf, online pdf tools">
+    <link rel="canonical" href="https://yourwebsite.com"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_PUBLISHER_ID"
+     crossorigin="anonymous"></script>
+
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #F5A623;
+            --background-color: #f4f7f6;
+            --card-bg-color: #ffffff;
+            --text-color: #333;
+            --light-gray: #e0e0e0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        main {
+            padding: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Tool Grid */
+        #tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .tool-card {
+            background-color: var(--card-bg-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            padding: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .tool-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .tool-card h3 {
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        /* Workspace Area */
+        #workspace {
+            background-color: var(--card-bg-color);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        #tool-title {
+            margin-top: 0;
+        }
+
+        #file-drop-zone {
+            border: 3px dashed var(--light-gray);
+            border-radius: 8px;
+            padding: 3rem 1rem;
+            margin-top: 1rem;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+        }
+
+        #file-drop-zone.dragover {
+            background-color: #eaf2fb;
+            border-color: var(--primary-color);
+        }
+
+        #file-drop-zone i {
+            font-size: 3rem;
+            color: var(--light-gray);
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #357ABD;
+        }
+
+        .btn-process {
+            background-color: var(--secondary-color);
+            margin-top: 1.5rem;
+        }
+
+        .btn-process:hover {
+            background-color: #D98E1A;
+        }
+
+        /* Dynamic Options */
+        #options-container {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: #fafafa;
+            border-radius: 5px;
+        }
+
+        .option-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .option-group label {
+            font-weight: bold;
+        }
+
+        .option-group input[type="range"] {
+            width: 80%;
+            max-width: 300px;
+        }
+
+        .option-group span {
+            font-style: italic;
+            color: #666;
+        }
+
+        /* Utility Classes */
+        .hidden {
+            display: none !important;
+        }
+
+        #loading-spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 1.5rem auto 0;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Ad Placeholders */
+        .ad-placeholder {
+            width: 100%;
+            margin: 2rem 0;
+            min-height: 90px; /* Default min-height for ad units */
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: #6c757d;
+            border: 1px dashed #ced4da;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            background-color: #343a40;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            #tool-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #tool-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1><i class="fas fa-file-alt"></i> DocuMaster Suite</h1>
+        <p>Your complete online document processing toolkit.</p>
+    </header>
+
+    <div class="ad-placeholder ad-banner-top">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-YOUR_ADSENSE_PUBLISHER_ID"
+             data-ad-slot="YOUR_AD_UNIT_ID"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <main>
+        <section id="workspace" class="hidden">
+            <h2 id="tool-title">Tool Title</h2>
+            <div id="file-drop-zone">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p>Drag & drop your file here or</p>
+                <button id="browse-btn" class="btn">Browse Files</button>
+                <input type="file" id="file-input" hidden>
+            </div>
+            <div id="file-info" class="hidden">
+                <p>File selected: <strong id="file-name"></strong></p>
+            </div>
+            
+            <div id="options-container" class="hidden">
+                </div>
+
+            <button id="process-btn" class="btn btn-process hidden">Process File</button>
+            <div id="loading-spinner" class="hidden"></div>
+        </section>
+
+        <section id="tool-grid">
+            <div class="tool-card" data-tool="merge-pdf" data-title="Merge PDF">
+                <i class="fas fa-object-group"></i><h3>Merge PDF</h3><p>Combine multiple PDFs into one.</p>
+            </div>
+            <div class="tool-card" data-tool="split-pdf" data-title="Split PDF">
+                <i class="fas fa-cut"></i><h3>Split PDF</h3><p>Extract pages from a PDF.</p>
+            </div>
+            <div class="tool-card" data-tool="compress-pdf" data-title="Compress PDF">
+                <i class="fas fa-compress-arrows-alt"></i><h3>Compress PDF</h3><p>Reduce the file size of your PDF.</p>
+            </div>
+            <div class="tool-card" data-tool="edit-pdf" data-title="Edit PDF">
+                <i class="fas fa-pencil-alt"></i><h3>Edit PDF</h3><p>Annotate or modify your PDF.</p>
+            </div>
+            <div class="tool-card" data-tool="pdf-to-word" data-title="PDF to Word">
+                <i class="fas fa-file-word"></i><h3>PDF to Word</h3><p>Convert PDF to editable DOCX.</p>
+            </div>
+            <div class="tool-card" data-tool="word-to-pdf" data-title="Word to PDF">
+                <i class="fas fa-file-pdf"></i><h3>Word to PDF</h3><p>Convert DOCX to PDF.</p>
+            </div>
+            <div class="tool-card" data-tool="pdf-to-ppt" data-title="PDF to PowerPoint">
+                <i class="fas fa-file-powerpoint"></i><h3>PDF to PowerPoint</h3><p>Convert PDF to editable PPTX.</p>
+            </div>
+            <div class="tool-card" data-tool="ppt-to-pdf" data-title="PowerPoint to PDF">
+                <i class="fas fa-file-pdf"></i><h3>PowerPoint to PDF</h3><p>Convert PPTX to PDF.</p>
+            </div>
+            <div class="tool-card" data-tool="pdf-to-excel" data-title="PDF to Excel">
+                <i class="fas fa-file-excel"></i><h3>PDF to Excel</h3><p>Extract data from PDF to XLSX.</p>
+            </div>
+            <div class="tool-card" data-tool="excel-to-pdf" data-title="Excel to PDF">
+                <i class="fas fa-file-pdf"></i><h3>Excel to PDF</h3><p>Convert XLSX to PDF.</p>
+            </div>
+            <div class="tool-card" data-tool="pdf-to-jpg" data-title="PDF to JPG">
+                <i class="fas fa-file-image"></i><h3>PDF to JPG</h3><p>Convert PDF pages to JPG images.</p>
+            </div>
+        </section>
+
+        <div class="ad-placeholder ad-rectangle-bottom">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_ADSENSE_PUBLISHER_ID"
+                 data-ad-slot="YOUR_AD_UNIT_ID_2"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 DocuMaster Suite. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toolCards = document.querySelectorAll('.tool-card');
+            const workspace = document.getElementById('workspace');
+            const toolGrid = document.getElementById('tool-grid');
+            const toolTitle = document.getElementById('tool-title');
+            const fileDropZone = document.getElementById('file-drop-zone');
+            const fileInput = document.getElementById('file-input');
+            const browseBtn = document.getElementById('browse-btn');
+            const optionsContainer = document.getElementById('options-container');
+            const processBtn = document.getElementById('process-btn');
+            const fileInfo = document.getElementById('file-info');
+            const fileNameDisplay = document.getElementById('file-name');
+            const loadingSpinner = document.getElementById('loading-spinner');
+
+            let selectedFile = null;
+            let currentTool = null;
+
+            // Show workspace when a tool is clicked
+            toolCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    currentTool = card.dataset.tool;
+                    toolTitle.textContent = card.dataset.title;
+                    
+                    toolGrid.classList.add('hidden');
+                    workspace.classList.remove('hidden');
+                    resetWorkspace();
+                    displayOptionsForTool(currentTool);
+                });
+            });
+
+            // File selection logic
+            browseBtn.addEventListener('click', () => fileInput.click());
+            fileInput.addEventListener('change', (e) => handleFileSelect(e.target.files));
+
+            // Drag and drop logic
+            fileDropZone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                fileDropZone.classList.add('dragover');
+            });
+            fileDropZone.addEventListener('dragleave', () => fileDropZone.classList.remove('dragover'));
+            fileDropZone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                fileDropZone.classList.remove('dragover');
+                handleFileSelect(e.dataTransfer.files);
+            });
+
+            function handleFileSelect(files) {
+                if (files.length > 0) {
+                    selectedFile = files[0];
+                    fileInfo.classList.remove('hidden');
+                    fileNameDisplay.textContent = selectedFile.name;
+                    processBtn.classList.remove('hidden');
+                }
+            }
+
+            function displayOptionsForTool(tool) {
+                optionsContainer.innerHTML = ''; // Clear previous options
+                if (tool === 'compress-pdf') {
+                    optionsContainer.classList.remove('hidden');
+                    const optionsHTML = `
+                        <div class="option-group">
+                            <label for="compression-level">Compression Level</label>
+                            <input type="range" id="compression-level" name="compressionLevel" min="1" max="5" value="3">
+                            <span id="compression-label">Medium (Recommended)</span>
+                        </div>
+                    `;
+                    optionsContainer.innerHTML = optionsHTML;
+                    
+                    const compressionSlider = document.getElementById('compression-level');
+                    const compressionLabel = document.getElementById('compression-label');
+                    const levels = {1: 'Extreme', 2: 'High', 3: 'Medium (Recommended)', 4: 'Low', 5: 'Minimal'};
+                    compressionSlider.addEventListener('input', () => {
+                        compressionLabel.textContent = levels[compressionSlider.value];
+                    });
+                } else {
+                    optionsContainer.classList.add('hidden');
+                }
+            }
+
+            function resetWorkspace() {
+                fileInput.value = '';
+                selectedFile = null;
+                fileInfo.classList.add('hidden');
+                processBtn.classList.add('hidden');
+                optionsContainer.classList.add('hidden');
+                loadingSpinner.classList.add('hidden');
+            }
+
+            // Handle the file processing
+            processBtn.addEventListener('click', async () => {
+                if (!selectedFile) {
+                    alert('Please select a file first!');
+                    return;
+                }
+
+                loadingSpinner.classList.remove('hidden');
+                processBtn.classList.add('hidden');
+
+                const formData = new FormData();
+                formData.append('file', selectedFile);
+
+                // Append options to form data
+                if (currentTool === 'compress-pdf') {
+                    const level = document.getElementById('compression-level').value;
+                    formData.append('compressionLevel', level);
+                }
+                
+                // This is where you send the data to your backend
+                try {
+                    // Replace `/api/${currentTool}` with your actual backend endpoint
+                    const response = await fetch(`/api/${currentTool}`, {
+                        method: 'POST',
+                        body: formData,
+                    });
+
+                    if (!response.ok) {
+                        const errorData = await response.json();
+                        throw new Error(errorData.message || `Server error: ${response.statusText}`);
+                    }
+
+                    // The backend returns the processed file for download
+                    const blob = await response.blob();
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.style.display = 'none';
+                    a.href = url;
+                    
+                    // Suggest a filename for the downloaded file
+                    const contentDisposition = response.headers.get('Content-Disposition');
+                    let downloadFilename = `processed_${selectedFile.name}`;
+                    if (contentDisposition) {
+                        const filenameMatch = contentDisposition.match(/filename="?(.+)"?/i);
+                        if (filenameMatch.length > 1) {
+                            downloadFilename = filenameMatch[1];
+                        }
+                    }
+                    a.download = downloadFilename; 
+                    
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    a.remove();
+
+                } catch (error) {
+                    console.error('Error processing file:', error);
+                    alert('An error occurred while processing your file. Please try again.\nError: ' + error.message);
+                } finally {
+                    loadingSpinner.classList.add('hidden');
+                    processBtn.classList.remove('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
