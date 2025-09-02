@@ -546,119 +546,144 @@
         <p class="section-subtitle">Our most frequently used document conversion and manipulation tools</p>
         
         <div class="tools-grid">
-            <div class="tool-card">
-                <div class="tool-icon">
-                    <i class="fas fa-file-word"></i>
-                </div>
-                <h3 class="tool-title">Word to PDF</h3>
-                <p class="tool-description">Convert Microsoft Word documents to PDF format with perfect formatting preserved.</p>
-                <a href="#" class="">Convert Now <i class="fas fa-arrow-right"></i></a>
-            </div>
-          
-            <div class="tool-card">
-                <div class="tool-icon">
-                    <i class="fas fa-file-pdf"></i>
-                </div>
-                <h3 class="tool-title">PDF to Word</h3>
-                <p class="tool-description">Convert PDF files to editable Word documents while maintaining original layout.</p>
-                <a href="#" class="tool-link">Convert Now <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="tool-card">
-                <div class="tool-icon">
-                    <i class="fas fa-file-powerpoint"></i>
-                </div>
-                <h3 class="tool-title">PowerPoint to PDF</h3>
-                <p class="tool-description">Convert PowerPoint presentations to PDF documents for easy sharing and printing.</p>
-                <a href="#" class="tool-link">Convert Now <i class="fas fa-arrow-right"></i></a>
-            </div>
+    <div class="tool-card">
+        <div class="tool-icon">
+            <i class="fas fa-file-word"></i>
         </div>
-        
-        <h2 class="section-title">All Document Tools</h2>
-        <p class="section-subtitle">Complete suite of tools for all your document needs</p>
-        
-        <div class="tools-grid">
-            <div class="tool-card">
-                <div class="tool-icon">
-                    <i class="fas fa-file-pdf"></i>
-                </div>
-                <h3 class="tool-title">PDF to PowerPoint</h3>
-                <p class="tool-description">Convert PDF files back to editable PowerPoint presentations.</p>
-                <a href="#" class="tool-link">Convert Now <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="tool-card">
-                <div class="tool-icon">
-                    <i class="fas fa-file-excel"></i>
-                </div>
-                <h3 class="tool-title">Excel to PDF</h3>
-                <p class="tool-description">Convert Excel spreadsheets to PDF format while preserving formulas and formatting.</p>
-                <a href="#" class="tool-link">Convert Now <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="tool-card">
-                <div class="tool-icon">
-                    <i class="fas fa-file-pdf"></i>
-                </div>
-                <h3 class="tool-title">PDF to Excel</h3>
-                <p class="tool-description">Extract tables from PDF files and convert them to editable Excel spreadsheets.</p>
-                <a href="#" class="tool-link">Convert Now <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="tool-card">
-                <div class="tool-icon">
-                    <i class="fas fa-file-image"></i>
-                </div>
-                <h3 class="tool-title">PDF to JPG</h3>
-                <p class="tool-description">Convert PDF pages to high-quality JPG images for easy sharing and use.</p>
-                <a href="#" class="tool-link">Convert Now <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="tool-card">
-                <div class="tool-icon">
-                    <i class="fas fa-compress-arrows-alt"></i>
-                </div>
-                <h3 class="tool-title">Compress PDF</h3>
-                <p class="tool-description">Reduce PDF file size without significant quality loss. Choose compression level.</p>
-                <a href="#" class="tool-link">Compress Now <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="tool-card">
-                <div class="tool-icon">
-                    <i class="fas fa-edit"></i>
-                </div>
-                <h3 class="tool-title">Edit PDF</h3>
-                <p class="tool-description">Edit text, images, and pages in your PDF documents with our easy-to-use tool.</p>
-                <a href="#" class="tool-link">Edit Now <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="tool-card">
-                <div class="tool-icon">
-                    <i class="fas fa-object-group"></i>
-                </div>
-                <h3 class="tool-title">Merge PDF</h3>
-                <p class="tool-description">Combine multiple PDF files into a single document with our merge tool.</p>
-                <a href="#" class="tool-link">Merge Now <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="tool-card">
-                <div class="tool-icon">
-                    <i class="fas fa-cut"></i>
-                </div>
-                <h3 class="tool-title">Split PDF</h3>
-                <p class="tool-description">Split a PDF document into multiple files by pages or content.</p>
-                <a href="#" class="tool-link">Split Now <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="tool-card">
-                <div class="tool-icon">
-                    <i class="fas fa-lock"></i>
-                </div>
-                <h3 class="tool-title">PDF Security</h3>
-                <p class="tool-description">Add passwords and permissions to your PDF files to protect sensitive information.</p>
-                <a href="#" class="tool-link">Secure Now <i class="fas fa-arrow-right"></i></a>
-            </div>
+        <h3 class="tool-title">Word to PDF</h3>
+        <p class="tool-description">Convert Microsoft Word documents to PDF format with perfect formatting preserved.</p>
+        <a href="converter-word-to-pdf.html" class="tool-link" target="_blank">
+            Convert Now <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+  
+    <div class="tool-card">
+        <div class="tool-icon">
+            <i class="fas fa-file-pdf"></i>
         </div>
+        <h3 class="tool-title">PDF to Word</h3>
+        <p class="tool-description">Convert PDF files to editable Word documents while maintaining original layout.</p>
+        <a href="converter-pdf-to-word.html" class="tool-link" target="_blank">
+            Convert Now <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+    
+    <div class="tool-card">
+        <div class="tool-icon">
+            <i class="fas fa-file-powerpoint"></i>
+        </div>
+        <h3 class="tool-title">PowerPoint to PDF</h3>
+        <p class="tool-description">Convert PowerPoint presentations to PDF documents for easy sharing and printing.</p>
+        <a href="converter-ppt-to-pdf.html" class="tool-link" target="_blank">
+            Convert Now <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+
+<h2 class="section-title">All Document Tools</h2>
+<p class="section-subtitle">Complete suite of tools for all your document needs</p>
+
+<div class="tools-grid">
+    <div class="tool-card">
+        <div class="tool-icon">
+            <i class="fas fa-file-pdf"></i>
+        </div>
+        <h3 class="tool-title">PDF to PowerPoint</h3>
+        <p class="tool-description">Convert PDF files back to editable PowerPoint presentations.</p>
+        <a href="converter-pdf-to-ppt.html" class="tool-link" target="_blank">
+            Convert Now <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+    
+    <div class="tool-card">
+        <div class="tool-icon">
+            <i class="fas fa-file-excel"></i>
+        </div>
+        <h3 class="tool-title">Excel to PDF</h3>
+        <p class="tool-description">Convert Excel spreadsheets to PDF format while preserving formulas and formatting.</p>
+        <a href="converter-excel-to-pdf.html" class="tool-link" target="_blank">
+            Convert Now <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+    
+    <div class="tool-card">
+        <div class="tool-icon">
+            <i class="fas fa-file-pdf"></i>
+        </div>
+        <h3 class="tool-title">PDF to Excel</h3>
+        <p class="tool-description">Extract tables from PDF files and convert them to editable Excel spreadsheets.</p>
+        <a href="converter-pdf-to-excel.html" class="tool-link" target="_blank">
+            Convert Now <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+    
+    <div class="tool-card">
+        <div class="tool-icon">
+            <i class="fas fa-file-image"></i>
+        </div>
+        <h3 class="tool-title">PDF to JPG</h3>
+        <p class="tool-description">Convert PDF pages to high-quality JPG images for easy sharing and use.</p>
+        <a href="converter-pdf-to-jpg.html" class="tool-link" target="_blank">
+            Convert Now <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+    
+    <div class="tool-card">
+        <div class="tool-icon">
+            <i class="fas fa-compress-arrows-alt"></i>
+        </div>
+        <h3 class="tool-title">Compress PDF</h3>
+        <p class="tool-description">Reduce PDF file size without significant quality loss. Choose compression level.</p>
+        <a href="converter-compress-pdf.html" class="tool-link" target="_blank">
+            Compress Now <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+    
+    <div class="tool-card">
+        <div class="tool-icon">
+            <i class="fas fa-edit"></i>
+        </div>
+        <h3 class="tool-title">Edit PDF</h3>
+        <p class="tool-description">Edit text, images, and pages in your PDF documents with our easy-to-use tool.</p>
+        <a href="converter-edit-pdf.html" class="tool-link" target="_blank">
+            Edit Now <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+    
+    <div class="tool-card">
+        <div class="tool-icon">
+            <i class="fas fa-object-group"></i>
+        </div>
+        <h3 class="tool-title">Merge PDF</h3>
+        <p class="tool-description">Combine multiple PDF files into a single document with our merge tool.</p>
+        <a href="converter-merge-pdf.html" class="tool-link" target="_blank">
+            Merge Now <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+    
+    <div class="tool-card">
+        <div class="tool-icon">
+            <i class="fas fa-cut"></i>
+        </div>
+        <h3 class="tool-title">Split PDF</h3>
+        <p class="tool-description">Split a PDF document into multiple files by pages or content.</p>
+        <a href="converter-split-pdf.html" class="tool-link" target="_blank">
+            Split Now <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+    
+    <div class="tool-card">
+        <div class="tool-icon">
+            <i class="fas fa-lock"></i>
+        </div>
+        <h3 class="tool-title">PDF Security</h3>
+        <p class="tool-description">Add passwords and permissions to your PDF files to protect sensitive information.</p>
+        <a href="converter-pdf-security.html" class="tool-link" target="_blank">
+            Secure Now <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+
         
         <div class="features">
             <div class="feature">
